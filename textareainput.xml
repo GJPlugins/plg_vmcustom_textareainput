@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmcustom" method="upgrade">
+    <name>VMCustom - textareainput</name>
+	<author>Gartes</author>
+	<authorEmail>sad.net79@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<creationDate></creationDate>
+	<copyright></copyright>
+    <version>0.0.1</version>
+    <description>textarea input plugin for product</description>
+	<scriptfile>textareainput.install.php</scriptfile>
+    <!--languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_vmcustom_textareainput.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_vmcustom_textareainput.sys.ini</language>
+    </languages-->
+    <files>
+        <filename plugin="textareainput">textareainput.php</filename>
+        <filename>index.html</filename>
+        <folder>textareainput</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+        <folder>elements</folder>
+    </files>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+        <param type="vmjpluginwarning" />
+        <param name="custom_title" type="text" size="20"  default="" label="VMCUSTOM_NAME_INFO" description="VMCUSTOM_NAME_INFO_DESC" />
+        <param name="custom_rows" type="text"  size="15"  default="5" label="VMCUSTOM_TEXTAREAINPUT_ROWS" description="VMCUSTOM_TEXTAREAINPUT_ROWS_DESC" />
+        <param name="custom_cols" type="text"  size="15"  default="40" label="VMCUSTOM_TEXTAREAINPUT_COLS" description="VMCUSTOM_TEXTAREAINPUT_COLS_DESC" />
+        <param name="min_char" type="text"  size="15"  default="0" label="VMCUSTOM_TEXTAREAINPUT_MIN_CHAR" description="VMCUSTOM_TEXTAREAINPUT_MIN_CHAR_DESC" />
+        <param name="max_char" type="text"  size="15"  default="0" label="VMCUSTOM_TEXTAREAINPUT_MAX_CHAR" description="VMCUSTOM_TEXTAREAINPUT_MAX_CHAR_DESC" />
+        <param name="custom_price_by_letter" type="list"  default="0" label="VMCUSTOM_TEXTAREAINPUT_PRICE_BY_LETTER_OR_INPUT" description="VMCUSTOM_TEXTAREAINPUT_PRICE_BY_LETTER_OR_INPUT_DESC" >
+			<option value="0">VMCUSTOM_TEXTAREAINPUT_PRICE_BY_INPUT</option>
+			<option value="1">VMCUSTOM_TEXTAREAINPUT_PRICE_BY_LETTER</option>
+		</param>
+        <param name="custom_emptytext" type="text" size="20" default="" label="VMCUSTOM_TEXTAREAINPUT_EMPTY" description="VMCUSTOM_TEXTAREAINPUT_EMPTY_DESC" />
+        <param name="custom_defaultsource" type="list"  default="text" label="VMCUSTOM_TEXTAREAINPUT_DEFAULT_SOURCE" description="VMCUSTOM_TEXTAREAINPUT_DEFAULT_SOURCE_DESC" >
+			<option value="text">VMCUSTOM_TEXTAREAINPUT_DEFAULT_TEXT_VALUE</option>
+			<option value="get">VMCUSTOM_TEXTAREAINPUT_DEFAULT_TEXT_GET</option>
+			<option value="post">VMCUSTOM_TEXTAREAINPUT_DEFAULT_TEXT_POST</option>
+		</param>
+        <param name="custom_defaultvalue" type="text" size="20" default="" label="VMCUSTOM_TEXTAREAINPUT_DEFAULT_VALUE" description="VMCUSTOM_TEXTAREAINPUT_DEFAULT_VALUE_DESC" />
+        <param name="custom_readonly" type="list"  default="0" label="VMCUSTOM_TEXTAREAINPUT_READONLY" description="VMCUSTOM_TEXTAREAINPUT_READONLY_DESC" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</param>
+    </params>
+	<config>
+		<fields name="params" addfieldpath="/plugins/vmcustom/textareainput/elements">
+			<fieldset name="basic">
+				<field type="title" default="PLG_DAYCOUNTS_VERSION" />
+				<field type="versioncheck" name="textareainput" versioncat="28" label="PLG_DAYCOUNTS_VERSION" pluginfolder="vmcustom" pluginname="textareainput" />
+				<field type="versionhistory" name="versionhistory" versioncat="28" label="" description="" />
+			</fieldset>
+            <fieldset name="template">
+				<field name="custom_title" type="text" size="20"  default="" label="VMCUSTOM_NAME_INFO" description="VMCUSTOM_NAME_INFO_DESC" />
+				<field name="custom_rows" type="text"  size="15"  default="5" label="VMCUSTOM_TEXTAREAINPUT_ROWS" description="VMCUSTOM_TEXTAREAINPUT_ROWS_DESC" />
+				<field name="custom_cols" type="text"  size="15"  default="40" label="VMCUSTOM_TEXTAREAINPUT_COLS" description="VMCUSTOM_TEXTAREAINPUT_COLS_DESC" />
+				<field name="min_char" type="text"  size="15"  default="0" label="VMCUSTOM_TEXTAREAINPUT_MIN_CHAR" description="VMCUSTOM_TEXTAREAINPUT_MIN_CHAR_DESC" />
+				<field name="max_char" type="text"  size="15"  default="0" label="VMCUSTOM_TEXTAREAINPUT_MAX_CHAR" description="VMCUSTOM_TEXTAREAINPUT_MAX_CHAR_DESC" />
+				<field name="custom_price_by_letter" type="list"  default="0" label="VMCUSTOM_TEXTAREAINPUT_PRICE_BY_LETTER_OR_INPUT" description="VMCUSTOM_TEXTAREAINPUT_PRICE_BY_LETTER_OR_INPUT_DESC" >
+					<option value="0">VMCUSTOM_TEXTAREAINPUT_PRICE_BY_INPUT</option>
+					<option value="1">VMCUSTOM_TEXTAREAINPUT_PRICE_BY_LETTER</option>
+				</field>
+				<field name="custom_emptytext" type="text" size="20" default="" label="VMCUSTOM_TEXTAREAINPUT_EMPTY" description="VMCUSTOM_TEXTAREAINPUT_EMPTY_DESC" />
+				<field name="custom_defaultsource" type="list"  default="text" label="VMCUSTOM_TEXTAREAINPUT_DEFAULT_SOURCE" description="VMCUSTOM_TEXTAREAINPUT_DEFAULT_SOURCE_DESC" >
+					<option value="text">VMCUSTOM_TEXTAREAINPUT_DEFAULT_TEXT_VALUE</option>
+					<option value="get">VMCUSTOM_TEXTAREAINPUT_DEFAULT_TEXT_GET</option>
+					<option value="post">VMCUSTOM_TEXTAREAINPUT_DEFAULT_TEXT_POST</option>
+				</field>
+				<field name="custom_defaultvalue" type="text" size="20" default="" label="VMCUSTOM_TEXTAREAINPUT_DEFAULT_VALUE" description="VMCUSTOM_TEXTAREAINPUT_DEFAULT_VALUE_DESC" />
+				<field name="custom_readonly" type="list"  default="0" label="VMCUSTOM_TEXTAREAINPUT_READONLY" description="VMCUSTOM_TEXTAREAINPUT_READONLY_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+            </fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="VirtueMart Textarea input"><![CDATA[http://www.daycounts.com/index.php?option=com_versions&catid=28&task=updateserver.xml]]></server>
+	</updateservers>
+</extension>
