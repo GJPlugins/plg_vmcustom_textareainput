@@ -76,7 +76,7 @@
 		</fields>
 	</config>
 	<updateservers>
-		<server type="extension" priority="1" name="plg_system_joomshopping_smart_filter">https://raw.githubusercontent.com/Gartes-JoomShopping/plg_system_joomshopping_smart_filter/master/textareainput_update.xml</server>
+		<server type="extension" priority="1" name="plg_vmcustom_textareainput">https://raw.githubusercontent.com/GJPlugins/plg_vmcustom_textareainput/master/textareainput_update.xml</server>
 	</updateservers>
 </extension>
 <!--
