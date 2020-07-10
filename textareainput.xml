@@ -76,6 +76,10 @@
 		</fields>
 	</config>
 	<updateservers>
-		<server type="extension" priority="1" name="VirtueMart Textarea input"><![CDATA[http://www.daycounts.com/index.php?option=com_versions&catid=28&task=updateserver.xml]]></server>
+		<server type="extension" priority="1" name="plg_system_joomshopping_smart_filter">https://raw.githubusercontent.com/Gartes-JoomShopping/plg_system_joomshopping_smart_filter/master/textareainput_update.xml</server>
 	</updateservers>
 </extension>
+<!--
+INSTALL:
+https://github.com/GJPlugins/plg_vmcustom_textareainput/archive/master.zip
+-->
